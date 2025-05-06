@@ -4,9 +4,9 @@ from typing import Optional, Callable
 from datetime import datetime
 
 class Main:
-    def __init__(self, sdk, logger):
+    def __init__(self, sdk):
         self.sdk = sdk
-        self.logger = logger
+        self.logger = sdk.logger
         self.AIChatConfig = sdk.env.get("AIChat", {})
 
         self.ai_prefix = self.AIChatConfig.get("prefix", "ai")

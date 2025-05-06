@@ -2,9 +2,9 @@ import asyncio
 from typing import List, Dict
 
 class Main:
-    def __init__(self, sdk, logger):
+    def __init__(self, sdk):
         self.sdk = sdk
-        self.logger = logger
+        self.logger = sdk.logger
         self.message_store = {}  # {chatId: [messages]}
 
     async def get_message_history(self, chatId) -> List[Dict]:
